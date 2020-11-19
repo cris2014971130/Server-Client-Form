@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="client.js"></script>
+        <script>
+        function Valida(formulario) {
+          if ((formulario.Nombre.value.length == 0) || (formulario.Codigo.value.length ==0)) {
+            alert('falta Informacion');
+            return false
+          }
+          return true
+          }
+        </script>
+    </head>
+    <body id="main">
+        <form id="Formulario"
+                onSubmit="return Valida(this);">
+            Nombre <input type="text" name="Nombre"><br>
+            Codigo <input type="text" name="Codigo" id="code"><br>
+            <!--<button onclick="getList()">Enviar</button>-->
+            <button type="submit" class="btn btn-primary" id="abc">Crear cuenta</button>
+        </form>
+        <button type="button" class="btn btn-primary" id="enviar">Enviar</button>
+    </body>
+</html>
